@@ -1,7 +1,6 @@
 package com.borba.dsvendas.entities;
 
 import java.time.LocalDate;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,10 +18,9 @@ public class Sale {
 	private Long Id;
 	private Integer visited;
 	private Integer deals;
-	private Double amounts;
+	private Double amount;
 	private LocalDate date;
 
-	
 	@ManyToOne
 	@JoinColumn(name = "seller_id")
 	private Seller seller;
@@ -31,11 +29,12 @@ public class Sale {
 
 	}
 
-	public Sale(Long id, Integer visited, Integer deals, Double amounts, LocalDate date, Seller seller) {
+	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
+		super();
 		Id = id;
 		this.visited = visited;
 		this.deals = deals;
-		this.amounts = amounts;
+		this.amount = amount;
 		this.date = date;
 		this.seller = seller;
 	}
@@ -64,12 +63,12 @@ public class Sale {
 		this.deals = deals;
 	}
 
-	public Double getAmounts() {
-		return amounts;
+	public Double getAmount() {
+		return amount;
 	}
 
-	public void setAmounts(Double amounts) {
-		this.amounts = amounts;
+	public void setAmount(Double amount) {
+		this.amount = amount;
 	}
 
 	public LocalDate getDate() {
@@ -87,4 +86,5 @@ public class Sale {
 	public void setSeller(Seller seller) {
 		this.seller = seller;
 	}
+
 }
