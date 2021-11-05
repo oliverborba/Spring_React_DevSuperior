@@ -1,6 +1,7 @@
 package com.borba.dsvendas.entities;
 
 import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +16,7 @@ public class Sale {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private Integer visited;
 	private Integer deals;
 	private Double amount;
@@ -31,7 +32,7 @@ public class Sale {
 
 	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
 		super();
-		Id = id;
+		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
 		this.amount = amount;
@@ -39,12 +40,12 @@ public class Sale {
 		this.seller = seller;
 	}
 
-	public Long getId() {
-		return Id;
+	public Long getid() {
+		return id;
 	}
 
-	public void setId(Long id) {
-		Id = id;
+	public void setid(Long id) {
+		this.id = id;
 	}
 
 	public Integer getVisited() {
