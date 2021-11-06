@@ -10,7 +10,6 @@ public class SaleDTO {
 	private Integer deals;
 	private Double amount;
 	private LocalDate date;
-
 	private SellerDTO seller;
 
 	public SaleDTO() {
