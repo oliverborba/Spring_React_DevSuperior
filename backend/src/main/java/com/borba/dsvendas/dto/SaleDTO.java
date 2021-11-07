@@ -26,11 +26,11 @@ public class SaleDTO {
 	}
 
 	public SaleDTO(Sale entity) {
-		this.id = entity.getid();
-		this.visited = entity.getVisited();
-		this.deals = entity.getDeals();
-		this.amount = entity.getAmount();
-		this.date = entity.getDate();
+		id = entity.getid();
+		visited = entity.getVisited();
+		deals = entity.getDeals();
+		amount = entity.getAmount();
+		date = entity.getDate();
 		seller = new SellerDTO(entity.getSeller());
 	}
 
